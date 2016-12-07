@@ -1,0 +1,1 @@
+C:\projeto\petWeb\WcfService1\obj\Release\WcfService1.csprojResolveAssemblyReference.cache
