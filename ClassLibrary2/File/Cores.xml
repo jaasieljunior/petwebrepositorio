@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cores>
+	<cores>
+    <nome>Branco</nome>
+    <abreviatura>Bcr</abreviatura>
+  </cores>
+	<cores>
+    <nome>Marron</nome>
+    <abreviatura>Mr</abreviatura>
+  </cores>
+	<cores>
+    <nome>Listrado</nome>
+    <abreviatura>Litr</abreviatura>
+  </cores>
+	<cores>
+    <nome>Malhado</nome>
+    <abreviatura>Malh</abreviatura>
+  </cores>
+	<cores>
+    <nome>Cinza</nome>
+    <abreviatura>CZ</abreviatura>
+  </cores>
+	<cores>
+    <nome>Preto</nome>
+    <abreviatura>Prt</abreviatura>
+  </cores>
+	<cores>
+    <nome>Outra</nome>
+    <abreviatura>Otr</abreviatura>
+  </cores>
+</cores>

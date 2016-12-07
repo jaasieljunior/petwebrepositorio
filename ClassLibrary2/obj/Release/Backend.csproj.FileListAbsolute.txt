@@ -1,0 +1,24 @@
+C:\projeto\petWeb\ClassLibrary2\bin\Release\Backend.dll
+C:\projeto\petWeb\ClassLibrary2\bin\Release\Backend.pdb
+C:\projeto\petWeb\ClassLibrary2\obj\Release\Backend.dll
+C:\projeto\petWeb\ClassLibrary2\obj\Release\Backend.pdb
+C:\Users\Dauto Freitas\Desktop\petweb\ClassLibrary2\bin\Release\Backend.dll
+C:\Users\Dauto Freitas\Desktop\petweb\ClassLibrary2\bin\Release\Backend.pdb
+C:\Users\Dauto Freitas\Desktop\petweb\ClassLibrary2\obj\Release\Backend.csprojResolveAssemblyReference.cache
+C:\Users\Dauto Freitas\Desktop\petweb\ClassLibrary2\obj\Release\Backend.dll
+C:\Users\Dauto Freitas\Desktop\petweb\ClassLibrary2\obj\Release\Backend.pdb
+C:\Users\Moises\Desktop\Eudes\petweB\ClassLibrary2\bin\Release\Backend.dll
+C:\Users\Moises\Desktop\Eudes\petweB\ClassLibrary2\bin\Release\Backend.pdb
+C:\Users\Moises\Desktop\Eudes\petweB\ClassLibrary2\obj\Release\Backend.dll
+C:\Users\Moises\Desktop\Eudes\petweB\ClassLibrary2\obj\Release\Backend.pdb
+C:\Users\Moises\Desktop\Eudes\petweB\ClassLibrary2\obj\Release\Backend.csprojResolveAssemblyReference.cache
+C:\Users\professor\Desktop\petweb\ClassLibrary2\bin\Release\Backend.dll
+C:\Users\professor\Desktop\petweb\ClassLibrary2\bin\Release\Backend.pdb
+C:\Users\professor\Desktop\petweb\ClassLibrary2\obj\Release\Backend.csprojResolveAssemblyReference.cache
+C:\Users\professor\Desktop\petweb\ClassLibrary2\obj\Release\Backend.dll
+C:\Users\professor\Desktop\petweb\ClassLibrary2\obj\Release\Backend.pdb
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\ClassLibrary2\bin\Release\Backend.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\ClassLibrary2\bin\Release\Backend.pdb
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\ClassLibrary2\obj\Release\Backend.csprojResolveAssemblyReference.cache
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\ClassLibrary2\obj\Release\Backend.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\ClassLibrary2\obj\Release\Backend.pdb

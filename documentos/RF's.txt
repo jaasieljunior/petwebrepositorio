@@ -1,0 +1,38 @@
+
+Requisitos Funcionais 
+
+
+RF001 -> Manter cliente: O sistema deverá permitir que o atendente mantenha o cadastro de cliente e nesse momento poderá manter o cadastro de animal[RF002]. [UC01]
+
+RF002-> Manter animal: O sistema deverá permitir que o atendente mantenha o cadastro de animal. [UC02]
+
+RF003-> Manter veterinário: O sistema deverá permitir que o atendente mantenha o cadastro de veterinário. [UC03]
+
+RF004-> Incluir vacina: O sistema deverá permitir que o veterinário inclua a vacina e a respectivas doenças a qual ela previne [RF005], assim como a dose correta [RF008].E por ocasião deverá registrar o calendário de vacinas [RF006]. [UC04]
+
+RF005-> Manter Doenças: O sistema deverá permitir que o veterinário mantenha o cadastro de Doenças. [UC04]
+
+RF006-> Registrar Calendário de Vacina: O sistema deverá permitir que o veterinário inclua o calendário de vacina.  [UC05]
+
+RF007-> Registrar Vacinação:  
+
+
+RF008-> Registrar Doses: O sistema deverá permitir que a dose seja registrada pelo veterinário.
+
+RF009->  Registrar
+
+
+RF010 -> Manter Espécie: O sistema deverá permitir que o veterinário mantenha o cadastro da espécie do animal. [UC09]
+
+
+=========================================================================================
+Requisitos Não Funcionais: 
+
+RFN001: Plataforma de Desenvolvimento: A Aplicação deverá ser executada no próprio computador(plataforma desktop).
+
+RFN002: Linguagem de Desenvolvimento: c#
+
+RFN003: Prazo de Desenvolvimento: 
+
+RFN004: 
+

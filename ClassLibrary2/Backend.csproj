@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B0677E7-9C51-4A39-B10A-8ADCA87236C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Backend</RootNamespace>
+    <AssemblyName>Backend</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basicas\Animal.cs" />
+    <Compile Include="Basicas\Animal_Cor.cs" />
+    <Compile Include="Basicas\Animal_Raca.cs" />
+    <Compile Include="Basicas\Cliente.cs" />
+    <Compile Include="Basicas\Cliente_Animal.cs" />
+    <Compile Include="Basicas\Cor.cs" />
+    <Compile Include="Basicas\Doenca.cs" />
+    <Compile Include="Basicas\Especie.cs" />
+    <Compile Include="Basicas\Raca.cs" />
+    <Compile Include="Basicas\Usuario.cs" />
+    <Compile Include="Basicas\UsuarioTipo.cs" />
+    <Compile Include="Dados\AnimalDao.cs" />
+    <Compile Include="Dados\AnimalDaoImp.cs" />
+    <Compile Include="Dados\Animal_CorDao.cs" />
+    <Compile Include="Dados\Animal_CorDaoImp.cs" />
+    <Compile Include="Dados\Animal_RacaDao.cs" />
+    <Compile Include="Dados\Animal_RacaDaoimp.cs" />
+    <Compile Include="Dados\ClienteDao.cs" />
+    <Compile Include="Dados\ClienteDaoImp.cs" />
+    <Compile Include="Dados\Cliente_AnimalDao.cs" />
+    <Compile Include="Dados\Cliente_AnimalDaoImp.cs" />
+    <Compile Include="Dados\CorDao.cs" />
+    <Compile Include="Dados\CorDaoImp.cs" />
+    <Compile Include="Dados\EspecieDao.cs" />
+    <Compile Include="Dados\EspecieDaoImp.cs" />
+    <Compile Include="Dados\RacaDao.cs" />
+    <Compile Include="Dados\RacaDaoImp.cs" />
+    <Compile Include="Dados\UsuarioDao.cs" />
+    <Compile Include="Dados\UsuarioDaoImp.cs" />
+    <Compile Include="Erro\ConexaoException.cs" />
+    <Compile Include="Erro\DaoException.cs" />
+    <Compile Include="Erro\GeralException.cs" />
+    <Compile Include="Fachada.cs" />
+    <Compile Include="Negocio\AnimalController.cs" />
+    <Compile Include="Negocio\Animal_corController.cs" />
+    <Compile Include="Negocio\Animal_RacaController.cs" />
+    <Compile Include="Negocio\Cliente_AnimalController.cs" />
+    <Compile Include="Negocio\CorController.cs" />
+    <Compile Include="Negocio\EspecieController.cs" />
+    <Compile Include="Negocio\RacaController.cs" />
+    <Compile Include="Negocio\ClienteController.cs" />
+    <Compile Include="Util\Conexao.cs" />
+    <Compile Include="Negocio\UsuarioController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Util\ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="File\Cores.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
