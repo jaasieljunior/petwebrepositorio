@@ -1,0 +1,850 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="todas" targetNamespace="http://tempuri.org/todas.xsd" xmlns:mstns="http://tempuri.org/todas.xsd" xmlns="http://tempuri.org/todas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.FrontEnd.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="animalTableAdapter" GeneratorDataComponentClassName="animalTableAdapter" Name="animal" UserDataComponentName="animalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "nome", "idade", "peso", "data_cadastro", "especie_id" FROM "dbo"."animal"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="idade" DataSetColumn="idade" />
+              <Mapping SourceColumn="peso" DataSetColumn="peso" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+              <Mapping SourceColumn="especie_id" DataSetColumn="especie_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="animal_clienteTableAdapter" GeneratorDataComponentClassName="animal_clienteTableAdapter" Name="animal_cliente" UserDataComponentName="animal_clienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "animal_id", "data_cadastro", "cliente_id" FROM "dbo"."animal_cliente"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="animal_id" DataSetColumn="animal_id" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+              <Mapping SourceColumn="cliente_id" DataSetColumn="cliente_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clienteTableAdapter" GeneratorDataComponentClassName="clienteTableAdapter" Name="cliente" UserDataComponentName="clienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "usuario_id", "cpf", "rg", "data_cadastro" FROM "dbo"."cliente"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usuario_id" DataSetColumn="usuario_id" />
+              <Mapping SourceColumn="cpf" DataSetColumn="cpf" />
+              <Mapping SourceColumn="rg" DataSetColumn="rg" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="corTableAdapter" GeneratorDataComponentClassName="corTableAdapter" Name="cor" UserDataComponentName="corTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "nome", "data_cadastro" FROM "dbo"."cor"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cor_animalTableAdapter" GeneratorDataComponentClassName="cor_animalTableAdapter" Name="cor_animal" UserDataComponentName="cor_animalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "animal_id", "cor_id", "data_cadastro" FROM "dbo"."cor_animal"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="animal_id" DataSetColumn="animal_id" />
+              <Mapping SourceColumn="cor_id" DataSetColumn="cor_id" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="doencaTableAdapter" GeneratorDataComponentClassName="doencaTableAdapter" Name="doenca" UserDataComponentName="doencaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "nome", "descricao", "data_cadastro" FROM "dbo"."doenca"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="doseTableAdapter" GeneratorDataComponentClassName="doseTableAdapter" Name="dose" UserDataComponentName="doseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "dosagem", "numero", "data_cadastro" FROM "dbo"."dose"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="dosagem" DataSetColumn="dosagem" />
+              <Mapping SourceColumn="numero" DataSetColumn="numero" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dose_vacinaTableAdapter" GeneratorDataComponentClassName="dose_vacinaTableAdapter" Name="dose_vacina" UserDataComponentName="dose_vacinaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "dose_id", "vacina_id", "data_proxima_aplicacao", "data_aplicacao", "vacinacao_id" FROM "dbo"."dose_vacina"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="dose_id" DataSetColumn="dose_id" />
+              <Mapping SourceColumn="vacina_id" DataSetColumn="vacina_id" />
+              <Mapping SourceColumn="data_proxima_aplicacao" DataSetColumn="data_proxima_aplicacao" />
+              <Mapping SourceColumn="data_aplicacao" DataSetColumn="data_aplicacao" />
+              <Mapping SourceColumn="vacinacao_id" DataSetColumn="vacinacao_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="especieTableAdapter" GeneratorDataComponentClassName="especieTableAdapter" Name="especie" UserDataComponentName="especieTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "nome", "descricao", "data_cadastro" FROM "dbo"."especie"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="periodicidadeTableAdapter" GeneratorDataComponentClassName="periodicidadeTableAdapter" Name="periodicidade" UserDataComponentName="periodicidadeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "periodo", "descricao", "data_cadastro" FROM "dbo"."periodicidade"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="periodo" DataSetColumn="periodo" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="permissaoTableAdapter" GeneratorDataComponentClassName="permissaoTableAdapter" Name="permissao" UserDataComponentName="permissaoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "nome", "descricao", "data_cadastro" FROM "dbo"."permissao"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="racaTableAdapter" GeneratorDataComponentClassName="racaTableAdapter" Name="raca" UserDataComponentName="racaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "nome", "data_cadastro" FROM "dbo"."raca"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="raca_animalTableAdapter" GeneratorDataComponentClassName="raca_animalTableAdapter" Name="raca_animal" UserDataComponentName="raca_animalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "animal_id", "raca_id", "data_cadastro" FROM "dbo"."raca_animal"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="animal_id" DataSetColumn="animal_id" />
+              <Mapping SourceColumn="raca_id" DataSetColumn="raca_id" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usuarioTableAdapter" GeneratorDataComponentClassName="usuarioTableAdapter" Name="usuario" UserDataComponentName="usuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "nome", "login", "senha", "email", "telefone", "data_cadastro", "tipo" FROM "dbo"."usuario"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="login" DataSetColumn="login" />
+              <Mapping SourceColumn="senha" DataSetColumn="senha" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="telefone" DataSetColumn="telefone" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+              <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usuario_permissaoTableAdapter" GeneratorDataComponentClassName="usuario_permissaoTableAdapter" Name="usuario_permissao" UserDataComponentName="usuario_permissaoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "usuario_id", "permissao_id", "data_cadastro" FROM "dbo"."usuario_permissao"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="usuario_id" DataSetColumn="usuario_id" />
+              <Mapping SourceColumn="permissao_id" DataSetColumn="permissao_id" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vacinaTableAdapter" GeneratorDataComponentClassName="vacinaTableAdapter" Name="vacina" UserDataComponentName="vacinaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "nome", "descricao", "data_cadastro" FROM "dbo"."vacina"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vacina_doencaTableAdapter" GeneratorDataComponentClassName="vacina_doencaTableAdapter" Name="vacina_doenca" UserDataComponentName="vacina_doencaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "doenca_id", "vacina_id", "data_cadastro" FROM "dbo"."vacina_doenca"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="doenca_id" DataSetColumn="doenca_id" />
+              <Mapping SourceColumn="vacina_id" DataSetColumn="vacina_id" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vacina_especieTableAdapter" GeneratorDataComponentClassName="vacina_especieTableAdapter" Name="vacina_especie" UserDataComponentName="vacina_especieTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "especie_id", "vacina_id", "data_cadastro" FROM "dbo"."vacina_especie"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="especie_id" DataSetColumn="especie_id" />
+              <Mapping SourceColumn="vacina_id" DataSetColumn="vacina_id" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vacina_periodicidadeTableAdapter" GeneratorDataComponentClassName="vacina_periodicidadeTableAdapter" Name="vacina_periodicidade" UserDataComponentName="vacina_periodicidadeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "periodicidade_id", "vacina_id", "data_cadastro" FROM "dbo"."vacina_periodicidade"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="periodicidade_id" DataSetColumn="periodicidade_id" />
+              <Mapping SourceColumn="vacina_id" DataSetColumn="vacina_id" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vacinacaoTableAdapter" GeneratorDataComponentClassName="vacinacaoTableAdapter" Name="vacinacao" UserDataComponentName="vacinacaoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "id", "veterinario_id", "animal_id", "data_vacinacao" FROM "dbo"."vacinacao"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="veterinario_id" DataSetColumn="veterinario_id" />
+              <Mapping SourceColumn="animal_id" DataSetColumn="animal_id" />
+              <Mapping SourceColumn="data_vacinacao" DataSetColumn="data_vacinacao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="veterinarioTableAdapter" GeneratorDataComponentClassName="veterinarioTableAdapter" Name="veterinario" UserDataComponentName="veterinarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "usuario_id", "crmv", "data_cadastro" FROM "dbo"."veterinario"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usuario_id" DataSetColumn="usuario_id" />
+              <Mapping SourceColumn="crmv" DataSetColumn="crmv" />
+              <Mapping SourceColumn="data_cadastro" DataSetColumn="data_cadastro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="todas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="todas" msprop:Generator_UserDSName="todas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="animal" msprop:Generator_TableClassName="animalDataTable" msprop:Generator_TableVarName="tableanimal" msprop:Generator_TablePropName="animal" msprop:Generator_RowDeletingName="animalRowDeleting" msprop:Generator_RowChangingName="animalRowChanging" msprop:Generator_RowEvHandlerName="animalRowChangeEventHandler" msprop:Generator_RowDeletedName="animalRowDeleted" msprop:Generator_UserTableName="animal" msprop:Generator_RowChangedName="animalRowChanged" msprop:Generator_RowEvArgName="animalRowChangeEvent" msprop:Generator_RowClassName="animalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idade" msprop:Generator_ColumnVarNameInTable="columnidade" msprop:Generator_ColumnPropNameInRow="idade" msprop:Generator_ColumnPropNameInTable="idadeColumn" msprop:Generator_UserColumnName="idade" type="xs:int" minOccurs="0" />
+              <xs:element name="peso" msprop:Generator_ColumnVarNameInTable="columnpeso" msprop:Generator_ColumnPropNameInRow="peso" msprop:Generator_ColumnPropNameInTable="pesoColumn" msprop:Generator_UserColumnName="peso" type="xs:double" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="especie_id" msprop:Generator_ColumnVarNameInTable="columnespecie_id" msprop:Generator_ColumnPropNameInRow="especie_id" msprop:Generator_ColumnPropNameInTable="especie_idColumn" msprop:Generator_UserColumnName="especie_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="animal_cliente" msprop:Generator_TableClassName="animal_clienteDataTable" msprop:Generator_TableVarName="tableanimal_cliente" msprop:Generator_TablePropName="animal_cliente" msprop:Generator_RowDeletingName="animal_clienteRowDeleting" msprop:Generator_RowChangingName="animal_clienteRowChanging" msprop:Generator_RowEvHandlerName="animal_clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="animal_clienteRowDeleted" msprop:Generator_UserTableName="animal_cliente" msprop:Generator_RowChangedName="animal_clienteRowChanged" msprop:Generator_RowEvArgName="animal_clienteRowChangeEvent" msprop:Generator_RowClassName="animal_clienteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="animal_id" msprop:Generator_ColumnVarNameInTable="columnanimal_id" msprop:Generator_ColumnPropNameInRow="animal_id" msprop:Generator_ColumnPropNameInTable="animal_idColumn" msprop:Generator_UserColumnName="animal_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="cliente_id" msprop:Generator_ColumnVarNameInTable="columncliente_id" msprop:Generator_ColumnPropNameInRow="cliente_id" msprop:Generator_ColumnPropNameInTable="cliente_idColumn" msprop:Generator_UserColumnName="cliente_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_UserTableName="cliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_RowEvArgName="clienteRowChangeEvent" msprop:Generator_RowClassName="clienteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario_id" msprop:Generator_ColumnVarNameInTable="columnusuario_id" msprop:Generator_ColumnPropNameInRow="usuario_id" msprop:Generator_ColumnPropNameInTable="usuario_idColumn" msprop:Generator_UserColumnName="usuario_id" type="xs:int" />
+              <xs:element name="cpf" msprop:Generator_ColumnVarNameInTable="columncpf" msprop:Generator_ColumnPropNameInRow="cpf" msprop:Generator_ColumnPropNameInTable="cpfColumn" msprop:Generator_UserColumnName="cpf" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rg" msprop:Generator_ColumnVarNameInTable="columnrg" msprop:Generator_ColumnPropNameInRow="rg" msprop:Generator_ColumnPropNameInTable="rgColumn" msprop:Generator_UserColumnName="rg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cor" msprop:Generator_TableClassName="corDataTable" msprop:Generator_TableVarName="tablecor" msprop:Generator_TablePropName="cor" msprop:Generator_RowDeletingName="corRowDeleting" msprop:Generator_RowChangingName="corRowChanging" msprop:Generator_RowEvHandlerName="corRowChangeEventHandler" msprop:Generator_RowDeletedName="corRowDeleted" msprop:Generator_UserTableName="cor" msprop:Generator_RowChangedName="corRowChanged" msprop:Generator_RowEvArgName="corRowChangeEvent" msprop:Generator_RowClassName="corRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cor_animal" msprop:Generator_TableClassName="cor_animalDataTable" msprop:Generator_TableVarName="tablecor_animal" msprop:Generator_TablePropName="cor_animal" msprop:Generator_RowDeletingName="cor_animalRowDeleting" msprop:Generator_RowChangingName="cor_animalRowChanging" msprop:Generator_RowEvHandlerName="cor_animalRowChangeEventHandler" msprop:Generator_RowDeletedName="cor_animalRowDeleted" msprop:Generator_UserTableName="cor_animal" msprop:Generator_RowChangedName="cor_animalRowChanged" msprop:Generator_RowEvArgName="cor_animalRowChangeEvent" msprop:Generator_RowClassName="cor_animalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="animal_id" msprop:Generator_ColumnVarNameInTable="columnanimal_id" msprop:Generator_ColumnPropNameInRow="animal_id" msprop:Generator_ColumnPropNameInTable="animal_idColumn" msprop:Generator_UserColumnName="animal_id" type="xs:int" minOccurs="0" />
+              <xs:element name="cor_id" msprop:Generator_ColumnVarNameInTable="columncor_id" msprop:Generator_ColumnPropNameInRow="cor_id" msprop:Generator_ColumnPropNameInTable="cor_idColumn" msprop:Generator_UserColumnName="cor_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="doenca" msprop:Generator_TableClassName="doencaDataTable" msprop:Generator_TableVarName="tabledoenca" msprop:Generator_TablePropName="doenca" msprop:Generator_RowDeletingName="doencaRowDeleting" msprop:Generator_RowChangingName="doencaRowChanging" msprop:Generator_RowEvHandlerName="doencaRowChangeEventHandler" msprop:Generator_RowDeletedName="doencaRowDeleted" msprop:Generator_UserTableName="doenca" msprop:Generator_RowChangedName="doencaRowChanged" msprop:Generator_RowEvArgName="doencaRowChangeEvent" msprop:Generator_RowClassName="doencaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn" msprop:Generator_UserColumnName="descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dose" msprop:Generator_TableClassName="doseDataTable" msprop:Generator_TableVarName="tabledose" msprop:Generator_TablePropName="dose" msprop:Generator_RowDeletingName="doseRowDeleting" msprop:Generator_RowChangingName="doseRowChanging" msprop:Generator_RowEvHandlerName="doseRowChangeEventHandler" msprop:Generator_RowDeletedName="doseRowDeleted" msprop:Generator_UserTableName="dose" msprop:Generator_RowChangedName="doseRowChanged" msprop:Generator_RowEvArgName="doseRowChangeEvent" msprop:Generator_RowClassName="doseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="dosagem" msprop:Generator_ColumnVarNameInTable="columndosagem" msprop:Generator_ColumnPropNameInRow="dosagem" msprop:Generator_ColumnPropNameInTable="dosagemColumn" msprop:Generator_UserColumnName="dosagem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numero" msprop:Generator_ColumnVarNameInTable="columnnumero" msprop:Generator_ColumnPropNameInRow="numero" msprop:Generator_ColumnPropNameInTable="numeroColumn" msprop:Generator_UserColumnName="numero" type="xs:double" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dose_vacina" msprop:Generator_TableClassName="dose_vacinaDataTable" msprop:Generator_TableVarName="tabledose_vacina" msprop:Generator_TablePropName="dose_vacina" msprop:Generator_RowDeletingName="dose_vacinaRowDeleting" msprop:Generator_RowChangingName="dose_vacinaRowChanging" msprop:Generator_RowEvHandlerName="dose_vacinaRowChangeEventHandler" msprop:Generator_RowDeletedName="dose_vacinaRowDeleted" msprop:Generator_UserTableName="dose_vacina" msprop:Generator_RowChangedName="dose_vacinaRowChanged" msprop:Generator_RowEvArgName="dose_vacinaRowChangeEvent" msprop:Generator_RowClassName="dose_vacinaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="dose_id" msprop:Generator_ColumnVarNameInTable="columndose_id" msprop:Generator_ColumnPropNameInRow="dose_id" msprop:Generator_ColumnPropNameInTable="dose_idColumn" msprop:Generator_UserColumnName="dose_id" type="xs:int" minOccurs="0" />
+              <xs:element name="vacina_id" msprop:Generator_ColumnVarNameInTable="columnvacina_id" msprop:Generator_ColumnPropNameInRow="vacina_id" msprop:Generator_ColumnPropNameInTable="vacina_idColumn" msprop:Generator_UserColumnName="vacina_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_proxima_aplicacao" msprop:Generator_ColumnVarNameInTable="columndata_proxima_aplicacao" msprop:Generator_ColumnPropNameInRow="data_proxima_aplicacao" msprop:Generator_ColumnPropNameInTable="data_proxima_aplicacaoColumn" msprop:Generator_UserColumnName="data_proxima_aplicacao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="data_aplicacao" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_aplicacao" msprop:Generator_ColumnPropNameInRow="data_aplicacao" msprop:Generator_ColumnPropNameInTable="data_aplicacaoColumn" msprop:Generator_UserColumnName="data_aplicacao" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="vacinacao_id" msprop:Generator_ColumnVarNameInTable="columnvacinacao_id" msprop:Generator_ColumnPropNameInRow="vacinacao_id" msprop:Generator_ColumnPropNameInTable="vacinacao_idColumn" msprop:Generator_UserColumnName="vacinacao_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="especie" msprop:Generator_TableClassName="especieDataTable" msprop:Generator_TableVarName="tableespecie" msprop:Generator_TablePropName="especie" msprop:Generator_RowDeletingName="especieRowDeleting" msprop:Generator_RowChangingName="especieRowChanging" msprop:Generator_RowEvHandlerName="especieRowChangeEventHandler" msprop:Generator_RowDeletedName="especieRowDeleted" msprop:Generator_UserTableName="especie" msprop:Generator_RowChangedName="especieRowChanged" msprop:Generator_RowEvArgName="especieRowChangeEvent" msprop:Generator_RowClassName="especieRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn" msprop:Generator_UserColumnName="descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="periodicidade" msprop:Generator_TableClassName="periodicidadeDataTable" msprop:Generator_TableVarName="tableperiodicidade" msprop:Generator_TablePropName="periodicidade" msprop:Generator_RowDeletingName="periodicidadeRowDeleting" msprop:Generator_RowChangingName="periodicidadeRowChanging" msprop:Generator_RowEvHandlerName="periodicidadeRowChangeEventHandler" msprop:Generator_RowDeletedName="periodicidadeRowDeleted" msprop:Generator_UserTableName="periodicidade" msprop:Generator_RowChangedName="periodicidadeRowChanged" msprop:Generator_RowEvArgName="periodicidadeRowChangeEvent" msprop:Generator_RowClassName="periodicidadeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="periodo" msprop:Generator_ColumnVarNameInTable="columnperiodo" msprop:Generator_ColumnPropNameInRow="periodo" msprop:Generator_ColumnPropNameInTable="periodoColumn" msprop:Generator_UserColumnName="periodo" type="xs:int" minOccurs="0" />
+              <xs:element name="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn" msprop:Generator_UserColumnName="descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="permissao" msprop:Generator_TableClassName="permissaoDataTable" msprop:Generator_TableVarName="tablepermissao" msprop:Generator_TablePropName="permissao" msprop:Generator_RowDeletingName="permissaoRowDeleting" msprop:Generator_RowChangingName="permissaoRowChanging" msprop:Generator_RowEvHandlerName="permissaoRowChangeEventHandler" msprop:Generator_RowDeletedName="permissaoRowDeleted" msprop:Generator_UserTableName="permissao" msprop:Generator_RowChangedName="permissaoRowChanged" msprop:Generator_RowEvArgName="permissaoRowChangeEvent" msprop:Generator_RowClassName="permissaoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn" msprop:Generator_UserColumnName="descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="raca" msprop:Generator_TableClassName="racaDataTable" msprop:Generator_TableVarName="tableraca" msprop:Generator_TablePropName="raca" msprop:Generator_RowDeletingName="racaRowDeleting" msprop:Generator_RowChangingName="racaRowChanging" msprop:Generator_RowEvHandlerName="racaRowChangeEventHandler" msprop:Generator_RowDeletedName="racaRowDeleted" msprop:Generator_UserTableName="raca" msprop:Generator_RowChangedName="racaRowChanged" msprop:Generator_RowEvArgName="racaRowChangeEvent" msprop:Generator_RowClassName="racaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="raca_animal" msprop:Generator_TableClassName="raca_animalDataTable" msprop:Generator_TableVarName="tableraca_animal" msprop:Generator_TablePropName="raca_animal" msprop:Generator_RowDeletingName="raca_animalRowDeleting" msprop:Generator_RowChangingName="raca_animalRowChanging" msprop:Generator_RowEvHandlerName="raca_animalRowChangeEventHandler" msprop:Generator_RowDeletedName="raca_animalRowDeleted" msprop:Generator_UserTableName="raca_animal" msprop:Generator_RowChangedName="raca_animalRowChanged" msprop:Generator_RowEvArgName="raca_animalRowChangeEvent" msprop:Generator_RowClassName="raca_animalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="animal_id" msprop:Generator_ColumnVarNameInTable="columnanimal_id" msprop:Generator_ColumnPropNameInRow="animal_id" msprop:Generator_ColumnPropNameInTable="animal_idColumn" msprop:Generator_UserColumnName="animal_id" type="xs:int" minOccurs="0" />
+              <xs:element name="raca_id" msprop:Generator_ColumnVarNameInTable="columnraca_id" msprop:Generator_ColumnPropNameInRow="raca_id" msprop:Generator_ColumnPropNameInTable="raca_idColumn" msprop:Generator_UserColumnName="raca_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="usuario" msprop:Generator_TableClassName="usuarioDataTable" msprop:Generator_TableVarName="tableusuario" msprop:Generator_TablePropName="usuario" msprop:Generator_RowDeletingName="usuarioRowDeleting" msprop:Generator_RowChangingName="usuarioRowChanging" msprop:Generator_RowEvHandlerName="usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="usuarioRowDeleted" msprop:Generator_UserTableName="usuario" msprop:Generator_RowChangedName="usuarioRowChanged" msprop:Generator_RowEvArgName="usuarioRowChangeEvent" msprop:Generator_RowClassName="usuarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="login" msprop:Generator_ColumnVarNameInTable="columnlogin" msprop:Generator_ColumnPropNameInRow="login" msprop:Generator_ColumnPropNameInTable="loginColumn" msprop:Generator_UserColumnName="login" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="senha" msprop:Generator_ColumnVarNameInTable="columnsenha" msprop:Generator_ColumnPropNameInRow="senha" msprop:Generator_ColumnPropNameInTable="senhaColumn" msprop:Generator_UserColumnName="senha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefone" msprop:Generator_ColumnVarNameInTable="columntelefone" msprop:Generator_ColumnPropNameInRow="telefone" msprop:Generator_ColumnPropNameInTable="telefoneColumn" msprop:Generator_UserColumnName="telefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="usuario_permissao" msprop:Generator_TableClassName="usuario_permissaoDataTable" msprop:Generator_TableVarName="tableusuario_permissao" msprop:Generator_TablePropName="usuario_permissao" msprop:Generator_RowDeletingName="usuario_permissaoRowDeleting" msprop:Generator_RowChangingName="usuario_permissaoRowChanging" msprop:Generator_RowEvHandlerName="usuario_permissaoRowChangeEventHandler" msprop:Generator_RowDeletedName="usuario_permissaoRowDeleted" msprop:Generator_UserTableName="usuario_permissao" msprop:Generator_RowChangedName="usuario_permissaoRowChanged" msprop:Generator_RowEvArgName="usuario_permissaoRowChangeEvent" msprop:Generator_RowClassName="usuario_permissaoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="usuario_id" msprop:Generator_ColumnVarNameInTable="columnusuario_id" msprop:Generator_ColumnPropNameInRow="usuario_id" msprop:Generator_ColumnPropNameInTable="usuario_idColumn" msprop:Generator_UserColumnName="usuario_id" type="xs:int" minOccurs="0" />
+              <xs:element name="permissao_id" msprop:Generator_ColumnVarNameInTable="columnpermissao_id" msprop:Generator_ColumnPropNameInRow="permissao_id" msprop:Generator_ColumnPropNameInTable="permissao_idColumn" msprop:Generator_UserColumnName="permissao_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vacina" msprop:Generator_TableClassName="vacinaDataTable" msprop:Generator_TableVarName="tablevacina" msprop:Generator_TablePropName="vacina" msprop:Generator_RowDeletingName="vacinaRowDeleting" msprop:Generator_RowChangingName="vacinaRowChanging" msprop:Generator_RowEvHandlerName="vacinaRowChangeEventHandler" msprop:Generator_RowDeletedName="vacinaRowDeleted" msprop:Generator_UserTableName="vacina" msprop:Generator_RowChangedName="vacinaRowChanged" msprop:Generator_RowEvArgName="vacinaRowChangeEvent" msprop:Generator_RowClassName="vacinaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn" msprop:Generator_UserColumnName="descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vacina_doenca" msprop:Generator_TableClassName="vacina_doencaDataTable" msprop:Generator_TableVarName="tablevacina_doenca" msprop:Generator_TablePropName="vacina_doenca" msprop:Generator_RowDeletingName="vacina_doencaRowDeleting" msprop:Generator_RowChangingName="vacina_doencaRowChanging" msprop:Generator_RowEvHandlerName="vacina_doencaRowChangeEventHandler" msprop:Generator_RowDeletedName="vacina_doencaRowDeleted" msprop:Generator_UserTableName="vacina_doenca" msprop:Generator_RowChangedName="vacina_doencaRowChanged" msprop:Generator_RowEvArgName="vacina_doencaRowChangeEvent" msprop:Generator_RowClassName="vacina_doencaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="doenca_id" msprop:Generator_ColumnVarNameInTable="columndoenca_id" msprop:Generator_ColumnPropNameInRow="doenca_id" msprop:Generator_ColumnPropNameInTable="doenca_idColumn" msprop:Generator_UserColumnName="doenca_id" type="xs:int" minOccurs="0" />
+              <xs:element name="vacina_id" msprop:Generator_ColumnVarNameInTable="columnvacina_id" msprop:Generator_ColumnPropNameInRow="vacina_id" msprop:Generator_ColumnPropNameInTable="vacina_idColumn" msprop:Generator_UserColumnName="vacina_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vacina_especie" msprop:Generator_TableClassName="vacina_especieDataTable" msprop:Generator_TableVarName="tablevacina_especie" msprop:Generator_TablePropName="vacina_especie" msprop:Generator_RowDeletingName="vacina_especieRowDeleting" msprop:Generator_RowChangingName="vacina_especieRowChanging" msprop:Generator_RowEvHandlerName="vacina_especieRowChangeEventHandler" msprop:Generator_RowDeletedName="vacina_especieRowDeleted" msprop:Generator_UserTableName="vacina_especie" msprop:Generator_RowChangedName="vacina_especieRowChanged" msprop:Generator_RowEvArgName="vacina_especieRowChangeEvent" msprop:Generator_RowClassName="vacina_especieRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="especie_id" msprop:Generator_ColumnVarNameInTable="columnespecie_id" msprop:Generator_ColumnPropNameInRow="especie_id" msprop:Generator_ColumnPropNameInTable="especie_idColumn" msprop:Generator_UserColumnName="especie_id" type="xs:int" minOccurs="0" />
+              <xs:element name="vacina_id" msprop:Generator_ColumnVarNameInTable="columnvacina_id" msprop:Generator_ColumnPropNameInRow="vacina_id" msprop:Generator_ColumnPropNameInTable="vacina_idColumn" msprop:Generator_UserColumnName="vacina_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vacina_periodicidade" msprop:Generator_TableClassName="vacina_periodicidadeDataTable" msprop:Generator_TableVarName="tablevacina_periodicidade" msprop:Generator_TablePropName="vacina_periodicidade" msprop:Generator_RowDeletingName="vacina_periodicidadeRowDeleting" msprop:Generator_RowChangingName="vacina_periodicidadeRowChanging" msprop:Generator_RowEvHandlerName="vacina_periodicidadeRowChangeEventHandler" msprop:Generator_RowDeletedName="vacina_periodicidadeRowDeleted" msprop:Generator_UserTableName="vacina_periodicidade" msprop:Generator_RowChangedName="vacina_periodicidadeRowChanged" msprop:Generator_RowEvArgName="vacina_periodicidadeRowChangeEvent" msprop:Generator_RowClassName="vacina_periodicidadeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="periodicidade_id" msprop:Generator_ColumnVarNameInTable="columnperiodicidade_id" msprop:Generator_ColumnPropNameInRow="periodicidade_id" msprop:Generator_ColumnPropNameInTable="periodicidade_idColumn" msprop:Generator_UserColumnName="periodicidade_id" type="xs:int" minOccurs="0" />
+              <xs:element name="vacina_id" msprop:Generator_ColumnVarNameInTable="columnvacina_id" msprop:Generator_ColumnPropNameInRow="vacina_id" msprop:Generator_ColumnPropNameInTable="vacina_idColumn" msprop:Generator_UserColumnName="vacina_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vacinacao" msprop:Generator_TableClassName="vacinacaoDataTable" msprop:Generator_TableVarName="tablevacinacao" msprop:Generator_TablePropName="vacinacao" msprop:Generator_RowDeletingName="vacinacaoRowDeleting" msprop:Generator_RowChangingName="vacinacaoRowChanging" msprop:Generator_RowEvHandlerName="vacinacaoRowChangeEventHandler" msprop:Generator_RowDeletedName="vacinacaoRowDeleted" msprop:Generator_UserTableName="vacinacao" msprop:Generator_RowChangedName="vacinacaoRowChanged" msprop:Generator_RowEvArgName="vacinacaoRowChangeEvent" msprop:Generator_RowClassName="vacinacaoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="veterinario_id" msprop:Generator_ColumnVarNameInTable="columnveterinario_id" msprop:Generator_ColumnPropNameInRow="veterinario_id" msprop:Generator_ColumnPropNameInTable="veterinario_idColumn" msprop:Generator_UserColumnName="veterinario_id" type="xs:int" minOccurs="0" />
+              <xs:element name="animal_id" msprop:Generator_ColumnVarNameInTable="columnanimal_id" msprop:Generator_ColumnPropNameInRow="animal_id" msprop:Generator_ColumnPropNameInTable="animal_idColumn" msprop:Generator_UserColumnName="animal_id" type="xs:int" minOccurs="0" />
+              <xs:element name="data_vacinacao" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_vacinacao" msprop:Generator_ColumnPropNameInRow="data_vacinacao" msprop:Generator_ColumnPropNameInTable="data_vacinacaoColumn" msprop:Generator_UserColumnName="data_vacinacao" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="veterinario" msprop:Generator_TableClassName="veterinarioDataTable" msprop:Generator_TableVarName="tableveterinario" msprop:Generator_TablePropName="veterinario" msprop:Generator_RowDeletingName="veterinarioRowDeleting" msprop:Generator_RowChangingName="veterinarioRowChanging" msprop:Generator_RowEvHandlerName="veterinarioRowChangeEventHandler" msprop:Generator_RowDeletedName="veterinarioRowDeleted" msprop:Generator_UserTableName="veterinario" msprop:Generator_RowChangedName="veterinarioRowChanged" msprop:Generator_RowEvArgName="veterinarioRowChangeEvent" msprop:Generator_RowClassName="veterinarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario_id" msprop:Generator_ColumnVarNameInTable="columnusuario_id" msprop:Generator_ColumnPropNameInRow="usuario_id" msprop:Generator_ColumnPropNameInTable="usuario_idColumn" msprop:Generator_UserColumnName="usuario_id" type="xs:int" />
+              <xs:element name="crmv" msprop:Generator_ColumnVarNameInTable="columncrmv" msprop:Generator_ColumnPropNameInRow="crmv" msprop:Generator_ColumnPropNameInTable="crmvColumn" msprop:Generator_UserColumnName="crmv" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_cadastro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndata_cadastro" msprop:Generator_ColumnPropNameInRow="data_cadastro" msprop:Generator_ColumnPropNameInTable="data_cadastroColumn" msprop:Generator_UserColumnName="data_cadastro" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:animal" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="animal_cliente_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:animal_cliente" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="cliente_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cliente" />
+      <xs:field xpath="mstns:usuario_id" />
+    </xs:unique>
+    <xs:unique name="cor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cor" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="cor_animal_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cor_animal" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="doenca_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:doenca" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="dose_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dose" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="dose_vacina_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dose_vacina" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="especie_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:especie" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="periodicidade_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:periodicidade" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="permissao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:permissao" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="raca_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:raca" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="raca_animal_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:raca_animal" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="usuario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:usuario" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="usuario_permissao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:usuario_permissao" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="vacina_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vacina" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="vacina_doenca_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vacina_doenca" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="vacina_especie_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vacina_especie" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="vacina_periodicidade_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vacina_periodicidade" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="vacinacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vacinacao" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="veterinario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:veterinario" />
+      <xs:field xpath="mstns:usuario_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

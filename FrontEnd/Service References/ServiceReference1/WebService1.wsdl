@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="FazerLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FazerLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FazerLoginResult" type="tns:Usuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Usuario">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="tns:UsuarioTipo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Permissao" type="tns:Permissao" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="UsuarioTipo">
+        <s:restriction base="s:string">
+          <s:enumeration value="CLIENTE" />
+          <s:enumeration value="VETERINARIO" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Permissao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataCadastro" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="inserirUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:Usuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="inserirUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inserirUsuarioResult" type="tns:Usuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarUsuario">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarUsuarioResult" type="tns:ArrayOfUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUsuario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Usuario" nillable="true" type="tns:Usuario" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="alterarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:Usuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="alterarUsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deletarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:Usuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletarUsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="inserirCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="tns:Cliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cliente">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RG" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="inserirClienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarCliente">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarClienteResult" type="tns:ArrayOfCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="alterCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="tns:Cliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="alterClienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deletarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="tns:Cliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletarClienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="inserirEspecie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="especie" type="tns:Especie" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Especie">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataCadastro" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="inserirEspecieResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarEspecie">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarEspecieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarEspecieResult" type="tns:ArrayOfEspecie" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEspecie">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Especie" nillable="true" type="tns:Especie" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="alterarEspecie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="especie" type="tns:Especie" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="alterarEspecieResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deletarEspecie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="especie" type="tns:Especie" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletarEspecieResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="inserirAnimal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="animal" type="tns:Animal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Animal">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Especie" type="tns:Especie" />
+          <s:element minOccurs="1" maxOccurs="1" name="Idade" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Peso" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Raca" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataCadastro" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="inserirAnimalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarAnimal">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarAnimalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarAnimalResult" type="tns:ArrayOfAnimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnimal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Animal" nillable="true" type="tns:Animal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AlterarAnimal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="animal" type="tns:Animal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterarAnimalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deletarAnimal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="animal" type="tns:Animal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletarAnimalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="inserirCor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cor" type="tns:Cor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cor">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Data_cadastro" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="inserirCorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarCor">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarCorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarCorResult" type="tns:ArrayOfCor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cor" nillable="true" type="tns:Cor" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AlterarCar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cor" type="tns:Cor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterarCarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deletarCor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cor" type="tns:Cor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletarCorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertRaca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="raca" type="tns:Raca" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Raca">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Data_cadastro" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertRacaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarRaca">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarRacaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarRacaResult" type="tns:ArrayOfRaca" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRaca">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Raca" nillable="true" type="tns:Raca" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AlterarRaca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="raca" type="tns:Raca" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterarRacaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deletarRaca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="raca" type="tns:Raca" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletarRacaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertCliente_Animal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente_animal" type="tns:Cliente_Animal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cliente_Animal">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Animal_id" type="tns:Animal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente_id" type="tns:Cliente" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertCliente_AnimalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarCliente_Animal">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarCliente_AnimalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarCliente_AnimalResult" type="tns:ArrayOfCliente_Animal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCliente_Animal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cliente_Animal" nillable="true" type="tns:Cliente_Animal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertAnimal_Cor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="animal_cor" type="tns:Animal_Cor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Animal_Cor">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Animal_id" type="tns:Animal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cor_id" type="tns:Cor" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertAnimal_CorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarAnimal_cor">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarAnimal_corResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarAnimal_corResult" type="tns:ArrayOfAnimal_Cor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnimal_Cor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Animal_Cor" nillable="true" type="tns:Animal_Cor" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertAnimal_Raca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="animal_raca" type="tns:Animal_Raca" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Animal_Raca">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Animal_id" type="tns:Animal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Raca_id" type="tns:Raca" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertAnimal_RacaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarAnimal_Raca">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarAnimal_RacaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarAnimal_RacaResult" type="tns:ArrayOfAnimal_Raca" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnimal_Raca">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Animal_Raca" nillable="true" type="tns:Animal_Raca" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FazerLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:FazerLogin" />
+  </wsdl:message>
+  <wsdl:message name="FazerLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:FazerLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="inserirUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:inserirUsuario" />
+  </wsdl:message>
+  <wsdl:message name="inserirUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:inserirUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:listarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="listarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:listarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="alterarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:alterarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="alterarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:alterarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:deletarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="deletarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:deletarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="inserirClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:inserirCliente" />
+  </wsdl:message>
+  <wsdl:message name="inserirClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:inserirClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:listarCliente" />
+  </wsdl:message>
+  <wsdl:message name="listarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:listarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="alterClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:alterCliente" />
+  </wsdl:message>
+  <wsdl:message name="alterClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:alterClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:deletarCliente" />
+  </wsdl:message>
+  <wsdl:message name="deletarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:deletarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="inserirEspecieSoapIn">
+    <wsdl:part name="parameters" element="tns:inserirEspecie" />
+  </wsdl:message>
+  <wsdl:message name="inserirEspecieSoapOut">
+    <wsdl:part name="parameters" element="tns:inserirEspecieResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarEspecieSoapIn">
+    <wsdl:part name="parameters" element="tns:listarEspecie" />
+  </wsdl:message>
+  <wsdl:message name="listarEspecieSoapOut">
+    <wsdl:part name="parameters" element="tns:listarEspecieResponse" />
+  </wsdl:message>
+  <wsdl:message name="alterarEspecieSoapIn">
+    <wsdl:part name="parameters" element="tns:alterarEspecie" />
+  </wsdl:message>
+  <wsdl:message name="alterarEspecieSoapOut">
+    <wsdl:part name="parameters" element="tns:alterarEspecieResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletarEspecieSoapIn">
+    <wsdl:part name="parameters" element="tns:deletarEspecie" />
+  </wsdl:message>
+  <wsdl:message name="deletarEspecieSoapOut">
+    <wsdl:part name="parameters" element="tns:deletarEspecieResponse" />
+  </wsdl:message>
+  <wsdl:message name="inserirAnimalSoapIn">
+    <wsdl:part name="parameters" element="tns:inserirAnimal" />
+  </wsdl:message>
+  <wsdl:message name="inserirAnimalSoapOut">
+    <wsdl:part name="parameters" element="tns:inserirAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarAnimalSoapIn">
+    <wsdl:part name="parameters" element="tns:listarAnimal" />
+  </wsdl:message>
+  <wsdl:message name="listarAnimalSoapOut">
+    <wsdl:part name="parameters" element="tns:listarAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlterarAnimalSoapIn">
+    <wsdl:part name="parameters" element="tns:AlterarAnimal" />
+  </wsdl:message>
+  <wsdl:message name="AlterarAnimalSoapOut">
+    <wsdl:part name="parameters" element="tns:AlterarAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletarAnimalSoapIn">
+    <wsdl:part name="parameters" element="tns:deletarAnimal" />
+  </wsdl:message>
+  <wsdl:message name="deletarAnimalSoapOut">
+    <wsdl:part name="parameters" element="tns:deletarAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="inserirCorSoapIn">
+    <wsdl:part name="parameters" element="tns:inserirCor" />
+  </wsdl:message>
+  <wsdl:message name="inserirCorSoapOut">
+    <wsdl:part name="parameters" element="tns:inserirCorResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarCorSoapIn">
+    <wsdl:part name="parameters" element="tns:listarCor" />
+  </wsdl:message>
+  <wsdl:message name="listarCorSoapOut">
+    <wsdl:part name="parameters" element="tns:listarCorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlterarCarSoapIn">
+    <wsdl:part name="parameters" element="tns:AlterarCar" />
+  </wsdl:message>
+  <wsdl:message name="AlterarCarSoapOut">
+    <wsdl:part name="parameters" element="tns:AlterarCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletarCorSoapIn">
+    <wsdl:part name="parameters" element="tns:deletarCor" />
+  </wsdl:message>
+  <wsdl:message name="deletarCorSoapOut">
+    <wsdl:part name="parameters" element="tns:deletarCorResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertRacaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertRaca" />
+  </wsdl:message>
+  <wsdl:message name="insertRacaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertRacaResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarRacaSoapIn">
+    <wsdl:part name="parameters" element="tns:listarRaca" />
+  </wsdl:message>
+  <wsdl:message name="listarRacaSoapOut">
+    <wsdl:part name="parameters" element="tns:listarRacaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlterarRacaSoapIn">
+    <wsdl:part name="parameters" element="tns:AlterarRaca" />
+  </wsdl:message>
+  <wsdl:message name="AlterarRacaSoapOut">
+    <wsdl:part name="parameters" element="tns:AlterarRacaResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletarRacaSoapIn">
+    <wsdl:part name="parameters" element="tns:deletarRaca" />
+  </wsdl:message>
+  <wsdl:message name="deletarRacaSoapOut">
+    <wsdl:part name="parameters" element="tns:deletarRacaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertCliente_AnimalSoapIn">
+    <wsdl:part name="parameters" element="tns:insertCliente_Animal" />
+  </wsdl:message>
+  <wsdl:message name="insertCliente_AnimalSoapOut">
+    <wsdl:part name="parameters" element="tns:insertCliente_AnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarCliente_AnimalSoapIn">
+    <wsdl:part name="parameters" element="tns:listarCliente_Animal" />
+  </wsdl:message>
+  <wsdl:message name="listarCliente_AnimalSoapOut">
+    <wsdl:part name="parameters" element="tns:listarCliente_AnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertAnimal_CorSoapIn">
+    <wsdl:part name="parameters" element="tns:insertAnimal_Cor" />
+  </wsdl:message>
+  <wsdl:message name="insertAnimal_CorSoapOut">
+    <wsdl:part name="parameters" element="tns:insertAnimal_CorResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarAnimal_corSoapIn">
+    <wsdl:part name="parameters" element="tns:listarAnimal_cor" />
+  </wsdl:message>
+  <wsdl:message name="listarAnimal_corSoapOut">
+    <wsdl:part name="parameters" element="tns:listarAnimal_corResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertAnimal_RacaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertAnimal_Raca" />
+  </wsdl:message>
+  <wsdl:message name="insertAnimal_RacaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertAnimal_RacaResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarAnimal_RacaSoapIn">
+    <wsdl:part name="parameters" element="tns:listarAnimal_Raca" />
+  </wsdl:message>
+  <wsdl:message name="listarAnimal_RacaSoapOut">
+    <wsdl:part name="parameters" element="tns:listarAnimal_RacaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="FazerLogin">
+      <wsdl:input message="tns:FazerLoginSoapIn" />
+      <wsdl:output message="tns:FazerLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirUsuario">
+      <wsdl:input message="tns:inserirUsuarioSoapIn" />
+      <wsdl:output message="tns:inserirUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuario">
+      <wsdl:input message="tns:listarUsuarioSoapIn" />
+      <wsdl:output message="tns:listarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="alterarUsuario">
+      <wsdl:input message="tns:alterarUsuarioSoapIn" />
+      <wsdl:output message="tns:alterarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarUsuario">
+      <wsdl:input message="tns:deletarUsuarioSoapIn" />
+      <wsdl:output message="tns:deletarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirCliente">
+      <wsdl:input message="tns:inserirClienteSoapIn" />
+      <wsdl:output message="tns:inserirClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarCliente">
+      <wsdl:input message="tns:listarClienteSoapIn" />
+      <wsdl:output message="tns:listarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="alterCliente">
+      <wsdl:input message="tns:alterClienteSoapIn" />
+      <wsdl:output message="tns:alterClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarCliente">
+      <wsdl:input message="tns:deletarClienteSoapIn" />
+      <wsdl:output message="tns:deletarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirEspecie">
+      <wsdl:input message="tns:inserirEspecieSoapIn" />
+      <wsdl:output message="tns:inserirEspecieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarEspecie">
+      <wsdl:input message="tns:listarEspecieSoapIn" />
+      <wsdl:output message="tns:listarEspecieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="alterarEspecie">
+      <wsdl:input message="tns:alterarEspecieSoapIn" />
+      <wsdl:output message="tns:alterarEspecieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarEspecie">
+      <wsdl:input message="tns:deletarEspecieSoapIn" />
+      <wsdl:output message="tns:deletarEspecieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirAnimal">
+      <wsdl:input message="tns:inserirAnimalSoapIn" />
+      <wsdl:output message="tns:inserirAnimalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal">
+      <wsdl:input message="tns:listarAnimalSoapIn" />
+      <wsdl:output message="tns:listarAnimalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarAnimal">
+      <wsdl:input message="tns:AlterarAnimalSoapIn" />
+      <wsdl:output message="tns:AlterarAnimalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarAnimal">
+      <wsdl:input message="tns:deletarAnimalSoapIn" />
+      <wsdl:output message="tns:deletarAnimalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirCor">
+      <wsdl:input message="tns:inserirCorSoapIn" />
+      <wsdl:output message="tns:inserirCorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarCor">
+      <wsdl:input message="tns:listarCorSoapIn" />
+      <wsdl:output message="tns:listarCorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarCar">
+      <wsdl:input message="tns:AlterarCarSoapIn" />
+      <wsdl:output message="tns:AlterarCarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarCor">
+      <wsdl:input message="tns:deletarCorSoapIn" />
+      <wsdl:output message="tns:deletarCorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertRaca">
+      <wsdl:input message="tns:insertRacaSoapIn" />
+      <wsdl:output message="tns:insertRacaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarRaca">
+      <wsdl:input message="tns:listarRacaSoapIn" />
+      <wsdl:output message="tns:listarRacaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarRaca">
+      <wsdl:input message="tns:AlterarRacaSoapIn" />
+      <wsdl:output message="tns:AlterarRacaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarRaca">
+      <wsdl:input message="tns:deletarRacaSoapIn" />
+      <wsdl:output message="tns:deletarRacaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCliente_Animal">
+      <wsdl:input message="tns:insertCliente_AnimalSoapIn" />
+      <wsdl:output message="tns:insertCliente_AnimalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarCliente_Animal">
+      <wsdl:input message="tns:listarCliente_AnimalSoapIn" />
+      <wsdl:output message="tns:listarCliente_AnimalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertAnimal_Cor">
+      <wsdl:input message="tns:insertAnimal_CorSoapIn" />
+      <wsdl:output message="tns:insertAnimal_CorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal_cor">
+      <wsdl:input message="tns:listarAnimal_corSoapIn" />
+      <wsdl:output message="tns:listarAnimal_corSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertAnimal_Raca">
+      <wsdl:input message="tns:insertAnimal_RacaSoapIn" />
+      <wsdl:output message="tns:insertAnimal_RacaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal_Raca">
+      <wsdl:input message="tns:listarAnimal_RacaSoapIn" />
+      <wsdl:output message="tns:listarAnimal_RacaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FazerLogin">
+      <soap:operation soapAction="http://tempuri.org/FazerLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirUsuario">
+      <soap:operation soapAction="http://tempuri.org/inserirUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuario">
+      <soap:operation soapAction="http://tempuri.org/listarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterarUsuario">
+      <soap:operation soapAction="http://tempuri.org/alterarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarUsuario">
+      <soap:operation soapAction="http://tempuri.org/deletarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirCliente">
+      <soap:operation soapAction="http://tempuri.org/inserirCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarCliente">
+      <soap:operation soapAction="http://tempuri.org/listarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterCliente">
+      <soap:operation soapAction="http://tempuri.org/alterCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarCliente">
+      <soap:operation soapAction="http://tempuri.org/deletarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirEspecie">
+      <soap:operation soapAction="http://tempuri.org/inserirEspecie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEspecie">
+      <soap:operation soapAction="http://tempuri.org/listarEspecie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterarEspecie">
+      <soap:operation soapAction="http://tempuri.org/alterarEspecie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarEspecie">
+      <soap:operation soapAction="http://tempuri.org/deletarEspecie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirAnimal">
+      <soap:operation soapAction="http://tempuri.org/inserirAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal">
+      <soap:operation soapAction="http://tempuri.org/listarAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarAnimal">
+      <soap:operation soapAction="http://tempuri.org/AlterarAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarAnimal">
+      <soap:operation soapAction="http://tempuri.org/deletarAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirCor">
+      <soap:operation soapAction="http://tempuri.org/inserirCor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarCor">
+      <soap:operation soapAction="http://tempuri.org/listarCor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarCar">
+      <soap:operation soapAction="http://tempuri.org/AlterarCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarCor">
+      <soap:operation soapAction="http://tempuri.org/deletarCor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRaca">
+      <soap:operation soapAction="http://tempuri.org/insertRaca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRaca">
+      <soap:operation soapAction="http://tempuri.org/listarRaca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarRaca">
+      <soap:operation soapAction="http://tempuri.org/AlterarRaca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarRaca">
+      <soap:operation soapAction="http://tempuri.org/deletarRaca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCliente_Animal">
+      <soap:operation soapAction="http://tempuri.org/insertCliente_Animal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarCliente_Animal">
+      <soap:operation soapAction="http://tempuri.org/listarCliente_Animal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAnimal_Cor">
+      <soap:operation soapAction="http://tempuri.org/insertAnimal_Cor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal_cor">
+      <soap:operation soapAction="http://tempuri.org/listarAnimal_cor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAnimal_Raca">
+      <soap:operation soapAction="http://tempuri.org/insertAnimal_Raca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal_Raca">
+      <soap:operation soapAction="http://tempuri.org/listarAnimal_Raca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FazerLogin">
+      <soap12:operation soapAction="http://tempuri.org/FazerLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirUsuario">
+      <soap12:operation soapAction="http://tempuri.org/inserirUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/listarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/alterarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/deletarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirCliente">
+      <soap12:operation soapAction="http://tempuri.org/inserirCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarCliente">
+      <soap12:operation soapAction="http://tempuri.org/listarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterCliente">
+      <soap12:operation soapAction="http://tempuri.org/alterCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarCliente">
+      <soap12:operation soapAction="http://tempuri.org/deletarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirEspecie">
+      <soap12:operation soapAction="http://tempuri.org/inserirEspecie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEspecie">
+      <soap12:operation soapAction="http://tempuri.org/listarEspecie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterarEspecie">
+      <soap12:operation soapAction="http://tempuri.org/alterarEspecie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarEspecie">
+      <soap12:operation soapAction="http://tempuri.org/deletarEspecie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirAnimal">
+      <soap12:operation soapAction="http://tempuri.org/inserirAnimal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal">
+      <soap12:operation soapAction="http://tempuri.org/listarAnimal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarAnimal">
+      <soap12:operation soapAction="http://tempuri.org/AlterarAnimal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarAnimal">
+      <soap12:operation soapAction="http://tempuri.org/deletarAnimal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirCor">
+      <soap12:operation soapAction="http://tempuri.org/inserirCor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarCor">
+      <soap12:operation soapAction="http://tempuri.org/listarCor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarCar">
+      <soap12:operation soapAction="http://tempuri.org/AlterarCar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarCor">
+      <soap12:operation soapAction="http://tempuri.org/deletarCor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRaca">
+      <soap12:operation soapAction="http://tempuri.org/insertRaca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRaca">
+      <soap12:operation soapAction="http://tempuri.org/listarRaca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarRaca">
+      <soap12:operation soapAction="http://tempuri.org/AlterarRaca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarRaca">
+      <soap12:operation soapAction="http://tempuri.org/deletarRaca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCliente_Animal">
+      <soap12:operation soapAction="http://tempuri.org/insertCliente_Animal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarCliente_Animal">
+      <soap12:operation soapAction="http://tempuri.org/listarCliente_Animal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAnimal_Cor">
+      <soap12:operation soapAction="http://tempuri.org/insertAnimal_Cor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal_cor">
+      <soap12:operation soapAction="http://tempuri.org/listarAnimal_cor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAnimal_Raca">
+      <soap12:operation soapAction="http://tempuri.org/insertAnimal_Raca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarAnimal_Raca">
+      <soap12:operation soapAction="http://tempuri.org/listarAnimal_Raca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:50536/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:50536/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
