@@ -1,0 +1,66 @@
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\csc.exe
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\vbc.exe
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\VBCSCompiler.exe
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\WebApplication4.dll.config
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\WebApplication4.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\WebApplication4.pdb
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\obj\Release\WebApplication4.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\obj\Release\WebApplication4.pdb
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\Backend.dll
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\bin\Backend.pdb
+C:\Users\Moises\Desktop\Eudes\petweB\WebApplication4\obj\Release\WebApplication4.csprojResolveAssemblyReference.cache
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\csc.exe
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\vbc.exe
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\VBCSCompiler.exe
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\WebApplication4.dll.config
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\WebApplication4.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\WebApplication4.pdb
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\Backend.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\Backend.pdb
+C:\Users\professor\Desktop\petweb\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\professor\Desktop\petweb\WebApplication4\obj\Release\WebApplication4.csprojResolveAssemblyReference.cache
+C:\Users\professor\Desktop\petweb\WebApplication4\obj\Release\WebApplication4.dll
+C:\Users\professor\Desktop\petweb\WebApplication4\obj\Release\WebApplication4.pdb
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\csc.exe
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\vbc.exe
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\VBCSCompiler.exe
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\WebApplication4.dll.config
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\WebApplication4.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\WebApplication4.pdb
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\Backend.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\Backend.pdb
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\obj\Release\WebApplication4.csprojResolveAssemblyReference.cache
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\obj\Release\WebApplication4.dll
+C:\Users\CCE\Downloads\a\oficial petweb\petwebAtualizado\WebApplication4\obj\Release\WebApplication4.pdb
